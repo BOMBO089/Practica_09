@@ -1,50 +1,31 @@
-#include<stdio.h>
-#include<math.h>
+#include <stdio.h>
+#include <math.h>
 
-float suma(float a, float b)
-{
-    float res;
-    res = a + b;
-    return (res);
+float suma(float a, float b) {
+    return a + b;
 }
 
-float resta(float a, float b)
-{
-    float res;
-    res = a - b;
-    return (res);
+float resta(float a, float b) {
+    return a - b;
 }
 
-float multiplicacion(float a, float b)
-{
-    float res;
-    res = a * b;
-    return (res);
+float multiplicacion(float a, float b) {
+    return a * b;
 }
 
-float division(float a, float b)
-{
-    float res;
-    res = a / b;
-    return (res);
+float division(float a, float b) {
+    return a / b;
 }
 
-float potencia(float a, int b)
-{
-    float res;
-    res = pow (a,b);
-    return (res);
+float potencia(float a, int b) {
+    return pow(a, b);
 }
 
-float raiz(float a)
-{
-    float res;
-    res = sqrt(a); 
-    return (res);
+float raiz(float a) {
+    return sqrt(a);
 }
 
-
-void main() {
+int main() {
     float a, b, res;
     int c, opc;
 
@@ -67,8 +48,7 @@ void main() {
                 scanf("%f", &a);
                 printf("Ingrese otro numero: ");
                 scanf("%f", &b);
-                res = suma(a, b);
-                printf("La suma es: %.2f\n", res);
+                printf("La suma es: %.2f\n", suma(a, b));
                 break;
 
             case 2:
@@ -76,8 +56,7 @@ void main() {
                 scanf("%f", &a);
                 printf("Ingrese otro numero: ");
                 scanf("%f", &b);
-                res = resta(a, b);
-                printf("La resta es: %.2f\n", res);
+                printf("La resta es: %.2f\n", resta(a, b));
                 break;
 
             case 3:
@@ -85,8 +64,7 @@ void main() {
                 scanf("%f", &a);
                 printf("Ingrese otro numero: ");
                 scanf("%f", &b);
-                res = multiplicacion(a, b);
-                printf("La multiplicacion es: %.2f\n", res);
+                printf("La multiplicacion es: %.2f\n", multiplicacion(a, b));
                 break;
 
             case 4:
@@ -95,8 +73,7 @@ void main() {
                 printf("Ingrese el divisor: ");
                 scanf("%f", &b);
                 if (b != 0) {
-                    res = division(a, b);
-                    printf("La division es: %.2f\n", res);
+                    printf("La division es: %.2f\n", division(a, b));
                 } else {
                     printf("Error: no se puede dividir entre 0.\n");
                 }
@@ -107,16 +84,14 @@ void main() {
                 scanf("%f", &a);
                 printf("Ingrese el exponente (entero): ");
                 scanf("%d", &c);
-                res = potencia(a, c);
-                printf("El resultado es: %.2f\n", res);
+                printf("El resultado es: %.2f\n", potencia(a, c));
                 break;
 
             case 6:
                 printf("Ingrese el numero: ");
                 scanf("%f", &a);
                 if (a >= 0) {
-                    res = raiz(a);
-                    printf("La raiz cuadrada es: %.2f\n", res);
+                    printf("La raiz cuadrada es: %.2f\n", raiz(a));
                 } else {
                     printf("Error: no se puede calcular la raiz de un numero negativo.\n");
                 }
@@ -132,4 +107,6 @@ void main() {
         }
 
     } while (opc != 0);
+
+    return 0;
 }
