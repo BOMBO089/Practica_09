@@ -1,6 +1,7 @@
 /*
 
 Gonzalez Huerta Alonso  7/5/25
+Representacion de funciones en C
 
 */
 
